@@ -1,0 +1,104 @@
+#*TDD int y float 
+# int = enteros
+#float = decimales
+
+#?Generalidades de los numbers
+# Pueden ser:
+# Positivos o negativos 
+#* “e” Representa la potencia de 10 en notación científica,
+# Son operando, valor o dato sobre el cual actúa un operador (aritmético y relacional) para realizar una operación.
+# Operando: valor o variable que se usa como entrada para un operador. Ej: 44, 44.44, 4.8e3, ...
+# Operador: símbolo o palabra que realiza una operación sobre uno o más operandos. Ej: +, _, *, /, >=, ...
+ 
+#& ************HAGAMOS OPERACIONES ARITMÉTICAS CON NUMEROS 🧮📱
+# ? OPERACIONES ARITMÉTICAS: se realizan entre int y float
+# Suma: +, 
+# Resta: -, 
+# Multiplicación: *, 
+# División: / (resultado float), 
+#* División entera: // (resultado int), 
+#* Módulo (residuo): %, 
+#* Potencia: **
+
+
+print('int + int ✅', (3 + 55))           #* ✅ Lo suma, resta, multiplica,...
+print('float - float ✅', (3.22 - 7.01))  #* ✅ Lo suma, resta, multiplica,...
+print('int * float ✅', (3*7.01))         #* ✅ Lo suma, resta, multiplica,...
+print('int || float + bool ✅', 3.87 + True)  #* ✅ False == 0, True ==1
+
+#?Cuando involucras str y el operador "+", la operacion sera de contatenacion, NO DE SUMA, y para concatenar ambos deben ser TDD str
+print("Concatenacion entre '3' + '7' es ", "3" + "7")  # Resultado: "37"
+
+#!No puedes operar aritmeticamente entre valores No numericos, ambos deben serlo 
+#print("Operacion entre '3' * '7' es ", "3" * "7")  #! TypeError: can't multiply sequence by non-int of type 'str'
+
+#& ⛹🏽⛹🏽⛹🏽⛹🏽 EJERCICIO 3: Intenta hacer una operacion aritmetica entre un str y un num y comenta a un lado el Tipo de Error
+#print('str + int', ('3'+7)) #! TypeError: can only concatenate str (not "int") to str
+#print('str / int', ('3'/7)) #! TypeError: unsupported operand type(s) for -: 'str' and 'int'
+#print('str - float', ('3'-7.01)) #! TypeError: unsupported operand type(s) for -: 'str' and 'float'
+
+
+
+#?Entonces a veces necesitaremos convertir los TDD, para realizar operaciones exitosas. 
+#? CONVERSION DE TDD: str(), int(), float(), bool()
+num = 25
+str(num) #su sola mencion no tiene efecto, si deseas afectar, asigna o reasigna.
+print('Concatenacion de 25 + "3" es', str(num) +"3") #*✅ Concatenacion de 25 + "3" es 253
+num = str(num)
+#print('Concatenacion de 25 + "3"', int(num) +"3") #!TypeError: can only concatenate str (not "int") to str
+
+num2= '22'
+int(num2)
+print(' "22" + 5 = ', int(num2)+5)
+
+queSere = bool(0) 
+print(type(queSere)) #<class 'bool'>
+print(queSere)
+num2Float = float(num2)
+print(num2Float) #22.0
+
+#& ⛹🏽⛹🏽⛹🏽⛹🏽 EJERCICIO 4: define 2 variables de TDD str con valores: int otra float, conviértelos a sus respectivos TDD y luego restalos. Muestra el resultado y el tipo de dat del resultado.
+
+
+
+#?Notación Científica “E”
+# Para expresar una cifra numérica de forma más resumida mediante su exponente en base 10, con el carácter “e” 
+#“e” Representa la potencia de 10 en notación científica, ®️ 2.5e3 = “2.5 multiplicado por 10 a la 3” =  2.5 × 10^3
+# Puede ser E || e y el valor se guardará como TDD float, a menos que sea muy extensa.
+
+peso_total = -2.5e3 #* peso_total = -2.5e3  = -2.5 * 10^3 = -2500 
+print('peso_total es', peso_total) #* ➕E Positiva: El punto se mueve los dígitos E a la derecha y agregas 0 si es necesario.
+
+altura_total = -0.0034E4  #* -00034.0 E4
+print('altura_total es', altura_total) #*-34.0
+
+altura_total = 3.4E-4 #*    0.0003.4 E-4 
+print("altura_total es ", altura_total) #* ➖E Negativa: El punto se mueve los dígitos E a la izquierda y agregas 0 si es necesario. 
+
+altura_total_negativa = -3.4E-4 #* -0.00034
+print("altura_total_negativa es", altura_total_negativa) #*®️RESUMEN: El signo de E indica la dirección de cambio del punto, y el signo de la cantidad, es precisamente el signo de toda la cantidad expresada con Notación Científica.
+
+
+
+#?OTROS OPERADORES ARITMÉTICOS
+
+#* División: / (resultado float) -> muestra parte decimal.
+print("10 / 3 = ", 10/3) #10 / 3 =  3.3333333333333335
+
+#* División entera: // (resultado int) 👀  desprecia la parte decimal
+print("10 // 3 = ", 10//3) #10 // 3 =  3
+
+#* Módulo (residuo): % 👀   devuelve el residuo (parte faccionaria)
+print("10 % 3 = ", 10%3) #10 % 3 =  1
+
+
+#* Potencia: ** 👀  Eleva la base
+print("10** 3 = ", 10**3) #10** 3 =  1000
+
+
+##& ⛹🏽⛹🏽⛹🏽⛹🏽 EJERCICIO 5: Como puedo saber si un numero desconocido es par? 
+
+
+
+
+
